@@ -491,13 +491,33 @@ form {
   flex-direction: column;
   gap: 10px;
 }
-input {
+.form-box input {
   width: 448px;
   height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
-textarea {
+input[name=""] {
+  background-image: url();
+}
+.form-box input[type="text"] {
+  background-image: url("../images/symbol-defs.svg#icon-person");
+}
+.form-box input[type="phone"] {
+  background-image: url("../images/symbol-defs.svg#icon-phone");
+}
+.form-box input[type="email"] {
+  background-image: url("../images/symbol-defs.svg#icon-email");
+}
+.form-box textarea {
   width: 448px;
   height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.form-box input:focus,
+.form-box textarea:focus {
+  border-color: #2196f3;
 }
 input[type="checkbox"] {
   outline: 0;
@@ -530,4 +550,46 @@ label {
 }
 .permission-box {
   margin-top: 20px;
+}
+/* Formularz w stopce do newslettera*/
+.form-footer-box button {
+  padding: 0px;
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.form-footer-box input[type="text"] {
+  box-sizing: border-box;
+  background-color: #2f303a;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 16px;
+}
+form[name="newsletter"] label {
+  width: 570px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
