@@ -26,7 +26,6 @@ svg {
       #2f303a66 100%
     ),
     url("../images/bckgrnd.jpg");
-  /*^Na githubie nie widać tego zdjęcia :(*/
   background-size: cover;
   background-position: center;
   height: 600px;
@@ -36,12 +35,14 @@ svg {
   flex-direction: column;
   gap: 30px;
 }
-.firs-header {
+.first-header {
   margin: 0px;
-  font-size: 44px;
+  width: 696px;
+  font-family: "Roboto";
+  font-style: normal;
   font-weight: 900;
+  font-size: 44px;
   line-height: 60px;
-  letter-spacing: 0.06em;
 }
 .section {
   padding: 94px 0 94px 0;
@@ -73,6 +74,7 @@ svg {
 .filter-button:focus {
   color: #ffffff;
   background-color: #2196f3;
+  cursor: pointer;
 }
 .subpages,
 .name-logo {
@@ -226,17 +228,23 @@ svg {
   gap: 30px;
   position: relative;
 }
-.products p {
+.prod-d {
+  margin: 0;
   font-weight: 400;
   text-align: left;
   color: #757575;
   font-size: 16px;
   line-height: 30px;
-  width: 322px;
 }
-.products h3 {
-  width: 322px;
+.prod-t {
+  margin: 0;
   font-size: 18px;
+}
+.product-des {
+  padding: 20px 24px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 .products li {
   background-color: #fff;
@@ -249,6 +257,7 @@ svg {
 .products li:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
 .overlay {
   margin: 0 auto;
@@ -347,18 +356,16 @@ li:hover .overlay {
 .social-f:active {
   background-color: #2196f3;
   border-radius: 50%;
-  fill: #fff;
 }
-.social-icon:hover img,
-.social-icon:active img {
+.social-icon:hover svg {
   fill: #fff;
 }
 .clients-logo:hover,
 .clients-logo:active {
   border-color: #2196f3;
 }
-.clients-logo svg:hover,
-.clients-logo svg:active {
+.clients-logo:hover svg,
+.clients-logo:active svg {
   fill: #2196f3;
 }
 .clients {
@@ -412,7 +419,7 @@ footer {
   gap: 10px;
 }
 a.social-f {
-  background: #afb1b8;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   width: 44px;
   height: 44px;
@@ -439,6 +446,7 @@ a.social-f {
 
 .name-logo-effect-f {
   color: #2196f3;
+  text-decoration: none;
 }
 .name-logo-effect-sec {
   color: #fff;
@@ -450,7 +458,7 @@ a.social-f {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.5);
 }
 .modal {
   position: absolute;
@@ -491,40 +499,45 @@ form {
   flex-direction: column;
   gap: 10px;
 }
-.form-box input {
+.form-box-input {
   padding: 0 0 0 42px;
   width: 406px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
 }
-.form-box input[type="text"] {
+.form-box-input[type="text"] {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 6C7.6575 6 9 4.6575 9 3C9 1.3425 7.6575 0 6 0C4.3425 0 3 1.3425 3 3C3 4.6575 4.3425 6 6 6ZM6 7.5C3.9975 7.5 0 8.505 0 10.5V11.25C0 11.6625 0.3375 12 0.75 12H11.25C11.6625 12 12 11.6625 12 11.25V10.5C12 8.505 8.0025 7.5 6 7.5Z' fill='%23212121'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: 15px 14px;
 }
-.form-box input[type="phone"] {
+.form-box-input[type="phone"] {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.996 9.12256L10.1579 8.91269C9.71641 8.86203 9.2822 9.01401 8.97102 9.32519L7.63945 10.6568C5.59144 9.61466 3.91251 7.94296 2.87041 5.8877L4.20922 4.54888C4.5204 4.2377 4.67237 3.80349 4.62171 3.36205L4.41185 1.53836C4.325 0.807445 3.70988 0.257446 2.97173 0.257446H1.71976C0.902004 0.257446 0.221746 0.937708 0.272403 1.75547C0.655953 7.93572 5.59868 12.8712 11.7717 13.2548C12.5894 13.3054 13.2697 12.6252 13.2697 11.8074V10.5555C13.2769 9.82453 12.7269 9.2094 11.996 9.12256Z' fill='%23212121'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: 15px 14px;
 }
-.form-box input[type="email"] {
+.form-box-input[type="email"] {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='12' viewBox='0 0 16 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 0H2C1.175 0 0.5075 0.675 0.5075 1.5L0.5 10.5C0.5 11.325 1.175 12 2 12H14C14.825 12 15.5 11.325 15.5 10.5V1.5C15.5 0.675 14.825 0 14 0ZM13.7 3.1875L8.3975 6.5025C8.1575 6.6525 7.8425 6.6525 7.6025 6.5025L2.3 3.1875C2.1125 3.0675 2 2.865 2 2.6475C2 2.145 2.5475 1.845 2.975 2.1075L8 5.25L13.025 2.1075C13.4525 1.845 14 2.145 14 2.6475C14 2.865 13.8875 3.0675 13.7 3.1875Z' fill='%23212121'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: 15px 14px;
 }
+
 .form-box textarea {
   padding: 0 0 0 15px;
   width: 433px;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
 }
-.form-box input:focus,
-.form-box textarea:focus {
+
+.form-box-input:focus-within,
+.form-box textarea:focus-within {
+  fill: #2196f3;
   border-color: #2196f3;
 }
-input[type="checkbox"] {
+.permission-box input[type="checkbox"] {
   outline: 0;
   width: 15px;
   height: 16px;
@@ -535,7 +548,7 @@ input[type="checkbox"] {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E");
   border-radius: 2px;
 }
-label {
+.form-box label {
   font-family: Roboto;
   font-size: 12px;
   font-weight: 400;
@@ -561,11 +574,18 @@ label {
 .permission-box {
   margin-top: 20px;
 }
+.txt-fix {
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
 /* Formularz w stopce do newslettera*/
+.form-n-fix {
+  display: flex;
+  gap: 12px;
+}
 .form-footer-box button {
-  padding: 0px;
+  padding: 10px 0 10px 0;
   width: 200px;
-  height: 50px;
   color: #fff;
   font-family: Roboto;
   font-size: 16px;
@@ -575,6 +595,7 @@ label {
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: 0;
   display: flex;
   justify-content: center;
   align-items: center;
