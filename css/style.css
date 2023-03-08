@@ -2,16 +2,16 @@ body {
   font-family: "Roboto", sans-serif;
   color: #212121;
   background-color: #fff;
-  width: 1600px;
-  margin: 0px;
+  margin: 0;
 }
 .top-box {
+  width: 100%;
   background-color: #fff;
   border: 1px solid #ececec;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 80px;
+  gap: 50px;
 }
 
 .socials-member svg,
@@ -19,6 +19,7 @@ body {
   fill: #afb1b8;
 }
 .big-box {
+  width: 1200px;
   text-align: center;
   color: #ffffff;
   background-image: radial-gradient(
@@ -117,6 +118,13 @@ body {
   display: flex;
   gap: 50px;
 }
+.brim {
+  border: 1px solid #ececec;
+}
+.top-box-spages {
+  display: flex;
+  align-items: center;
+}
 .contact:hover svg {
   fill: #2196f3;
 }
@@ -136,10 +144,12 @@ body {
 }
 .container {
   width: 1200px;
-  margin: 0px;
   display: flex;
   flex-wrap: wrap;
   gap: 70px;
+}
+.top-fix {
+  width: 100%;
 }
 .products,
 .news,
@@ -312,7 +322,7 @@ li:hover .overlay {
   height: 70;
 }
 .crew {
-  min-width: 1200px;
+  min-width: 1600px;
   margin: auto;
   background: #f5f4fa;
 }
@@ -370,6 +380,7 @@ li:hover .overlay {
   fill: #2196f3;
 }
 .clients {
+  padding-left: 0px;
   display: flex;
   gap: 30px;
 }
